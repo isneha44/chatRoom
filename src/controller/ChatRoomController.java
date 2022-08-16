@@ -85,5 +85,23 @@ public class ChatRoomController {
 
 
     public void SendOnAction(ActionEvent actionEvent) {
+
+        String msg = messageTxt.getText();
+        if (!msg.isEmpty() && filePath != null) {
+            writer.println("<" + userName + ": " + msg + ">" + filePath.getPath());
+        } else if (filePath != null && msg.isEmpty()) {
+            writer.println("<" + userName + ":   >" + filePath.getPath());
+        } else if (!msg.isEmpty() && filePath == null) {
+            writer.println("<" + userName + ": " + msg + ">" + "");
+        }
+
+        messageTxt.clear();
+
+        if (msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
+            System.exit(0);
+
+        }
+
     }
+
 }
