@@ -2,30 +2,27 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane fx:id="chatRoomContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChatRoomController">
+<AnchorPane fx:id="chatRoomContext" prefHeight="701.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChatRoomController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2e1f0f" height="624.0" layoutX="12.0" layoutY="8.0" stroke="#00000013" strokeType="INSIDE" width="608.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2e1f0f" height="624.0" layoutX="12.0" layoutY="8.0" stroke="#00000013" strokeType="INSIDE" width="610.0" />
+      <JFXButton layoutX="493.0" layoutY="656.0" onAction="#SendOnAction" prefHeight="31.0" prefWidth="113.0" text="Send" textFill="#650505" />
+      <JFXTextField fx:id="messageTxt" layoutX="52.0" layoutY="656.0" promptText="message" />
       <ImageView fitHeight="37.0" fitWidth="50.0" layoutX="443.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assets/photo-camera.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="493.0" layoutY="656.0" onAction="#SendOnAction" prefHeight="31.0" prefWidth="113.0" text="Send" textFill="#650505" />
-      <JFXTextField fx:id="messageTxt" layoutX="52.0" layoutY="656.0" promptText="message" />
-      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="221.0" layoutY="659.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../assets/send.png" />
-         </image>
-      </ImageView>
-      <ScrollBar layoutX="34.0" layoutY="614.0" prefHeight="18.0" prefWidth="565.0" />
-      <ScrollBar layoutX="590.0" layoutY="34.0" orientation="VERTICAL" prefHeight="568.0" prefWidth="18.0" />
-      <VBox fx:id="vbox" layoutX="25.0" layoutY="34.0" prefHeight="676.0" prefWidth="591.0" />
+      <ScrollPane prefHeight="633.0" prefWidth="591.0">
+         <content>
+            <VBox fx:id="vbox" prefHeight="651.0" prefWidth="600.0" />
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
