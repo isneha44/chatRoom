@@ -14,7 +14,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2e1f0f" height="624.0" layoutX="12.0" layoutY="8.0" stroke="#00000013" strokeType="INSIDE" width="610.0" />
       <JFXButton layoutX="493.0" layoutY="656.0" onAction="#SendOnAction" prefHeight="31.0" prefWidth="113.0" text="Send" textFill="#650505" />
       <JFXTextField fx:id="messageTxt" layoutX="52.0" layoutY="656.0" promptText="message" />
-      <ImageView fitHeight="37.0" fitWidth="50.0" layoutX="443.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="37.0" fitWidth="50.0" layoutX="443.0" layoutY="653.0" onMouseClicked="#takePhtoOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assets/photo-camera.png" />
          </image>
