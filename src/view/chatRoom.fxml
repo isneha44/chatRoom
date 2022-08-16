@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.ChatRoomController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="686.0" prefWidth="600.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.shape.Rectangle?&gt;&lt;Rectangle arcHeight=&quot;5.0&quot; arcWidth=&quot;5.0&quot; fill=&quot;#000000bb&quot; height=&quot;486.0&quot; stroke=&quot;BLACK&quot; strokeType=&quot;INSIDE&quot; width=&quot;480.0&quot; xmlns=&quot;http://javafx.com/javafx/8.0.171&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChatRoomController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2e1f0f" height="686.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <JFXButton layoutX="445.0" layoutY="620.0" prefHeight="31.0" prefWidth="113.0" text="Send" textFill="#650505" />
+      <ImageView fitHeight="37.0" fitWidth="50.0" layoutX="427.0" layoutY="617.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/photo-camera.png" />
+         </image>
+      </ImageView>
+      <JFXTextField layoutX="32.0" layoutY="636.0" promptText="message" />
+   </children>
 </AnchorPane>
